@@ -67,6 +67,6 @@ endgenerate
 // 	out_sum_final[(i+1)*8-1:i*8] = out_sum[(num1-1)*16*num2+16*(i+1)-1:(num1-1)*16*num2+16*i+8];
 // end
 // endgenerate
-assign out_sum_final = out_sum[num1*16*num2:(num1-1)*16*num2];
+assign out_sum_final = out_sum[num1*16*num2-1:(num1-1)*16*num2];
 assign out_weight_final = out_weight_below[num1*8*num2-1:(num1-1)*8*num2];
 endmodule
